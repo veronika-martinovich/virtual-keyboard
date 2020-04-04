@@ -1,0 +1,103 @@
+body {
+  font-family: 'Roboto', sans-serif; }
+
+.keyboard_container {
+  margin: 0 auto;
+  width: 920px; }
+
+.screen {
+  width: 100%;
+  height: 200px;
+  border: 1px solid #9c6d07;
+  border-radius: 4px;
+  margin: 30px 0px;
+  background-color: #feffbc96; }
+
+.keyboard {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  background-color: #b8b2b2d2;
+  border: 1.5px solid #494747;
+  border-radius: 4px;
+  width: 920px;
+  height: 300px;
+  padding-top: 10px;
+  padding-left: 10px; }
+
+.button_type_input {
+  background-color: #747070; }
+
+.button_type_system {
+  background-color: #494747; }
+
+.button_size_xs {
+  height: 50px;
+  width: 50px;
+  color: #ffffff;
+  margin-right: 10px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 3px 3px 5px #a19d9dd2;
+  cursor: pointer; }
+  .button_size_xs:hover {
+    background-color: #4e3a50; }
+
+.button_size_s {
+  height: 50px;
+  width: 57px;
+  color: #ffffff;
+  margin-right: 10px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 3px 3px 5px #a19d9dd2;
+  cursor: pointer; }
+  .button_size_s:hover {
+    background-color: #4e3a50; }
+
+.button_size_m {
+  height: 50px;
+  width: 110px;
+  color: #ffffff;
+  margin-right: 10px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 3px 3px 5px #a19d9dd2;
+  cursor: pointer; }
+  .button_size_m:hover {
+    background-color: #4e3a50; }
+
+.button_size_l {
+  height: 50px;
+  width: 120px;
+  color: #ffffff;
+  margin-right: 10px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 3px 3px 5px #a19d9dd2;
+  cursor: pointer; }
+  .button_size_l:hover {
+    background-color: #4e3a50; }
+
+.button_size_xl {
+  height: 50px;
+  width: 420px;
+  color: #ffffff;
+  margin-right: 10px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 3px 3px 5px #a19d9dd2;
+  cursor: pointer; }
+  .button_size_xl:hover {
+    background-color: #4e3a50; }
+
