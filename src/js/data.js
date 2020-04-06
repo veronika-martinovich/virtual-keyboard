@@ -5,7 +5,8 @@ export const buttons = [
     firstValue: "ё",
     secondValue: "`",
     firstShift: "Ё",
-    secondShift: "~"
+    secondShift: "~",
+    keyCode: "Backquote"
   },
   {
     size: "xs",
@@ -13,7 +14,8 @@ export const buttons = [
     firstValue: "1",
     secondValue: "1",
     firstShift: "!",
-    secondShift: "!"
+    secondShift: "!",
+    keyCode: "Digit1"
   },
   {
     size: "xs",
@@ -21,7 +23,8 @@ export const buttons = [
     firstValue: "2",
     secondValue: "2",
     firstShift: '"',
-    secondShift: '"'
+    secondShift: '"',
+    keyCode: "Digit2"
   },
   {
     size: "xs",
@@ -29,7 +32,8 @@ export const buttons = [
     firstValue: "3",
     secondValue: "3",
     firstShift: "№",
-    secondShift: "#"
+    secondShift: "#",
+    keyCode: "Digit3"
   },
   {
     size: "xs",
@@ -37,7 +41,8 @@ export const buttons = [
     firstValue: "4",
     secondValue: "4",
     firstShift: ";",
-    secondShift: "$"
+    secondShift: "$",
+    keyCode: "Digit4"
   },
   {
     size: "xs",
@@ -45,7 +50,8 @@ export const buttons = [
     firstValue: "5",
     secondValue: "5",
     firstShift: "%",
-    secondShift: "%"
+    secondShift: "%",
+    keyCode: "Digit5"
   },
   {
     size: "xs",
@@ -53,7 +59,8 @@ export const buttons = [
     firstValue: "6",
     secondValue: "6",
     firstShift: ":",
-    secondShift: "^"
+    secondShift: "^",
+    keyCode: "Digit6"
   },
   {
     size: "xs",
@@ -61,7 +68,8 @@ export const buttons = [
     firstValue: "7",
     secondValue: "7",
     firstShift: "?",
-    secondShift: "&"
+    secondShift: "&",
+    keyCode: "Digit7"
   },
   {
     size: "xs",
@@ -69,7 +77,8 @@ export const buttons = [
     firstValue: "8",
     secondValue: "8",
     firstShift: "*",
-    secondShift: "*"
+    secondShift: "*",
+    keyCode: "Digit8"
   },
   {
     size: "xs",
@@ -77,7 +86,8 @@ export const buttons = [
     firstValue: "9",
     secondValue: "9",
     firstShift: "(",
-    secondShift: "("
+    secondShift: "(",
+    keyCode: "Digit9"
   },
   {
     size: "xs",
@@ -85,7 +95,8 @@ export const buttons = [
     firstValue: "0",
     secondValue: "0",
     firstShift: ")",
-    secondShift: ")"
+    secondShift: ")",
+    keyCode: "Digit0"
   },
   {
     size: "xs",
@@ -93,7 +104,8 @@ export const buttons = [
     firstValue: "-",
     secondValue: "-",
     firstShift: "_",
-    secondShift: "_"
+    secondShift: "_",
+    keyCode: "Minus"
   },
   {
     size: "xs",
@@ -101,7 +113,8 @@ export const buttons = [
     firstValue: "=",
     secondValue: "=",
     firstShift: "+",
-    secondShift: "+"
+    secondShift: "+",
+    keyCode: "Equal"
   },
   {
     size: "l",
@@ -123,7 +136,8 @@ export const buttons = [
     firstValue: "й",
     secondValue: "q",
     firstShift: "Й",
-    secondShift: "Q"
+    secondShift: "Q",
+    keyCode: "KeyQ"
   },
   {
     size: "xs",
@@ -131,7 +145,8 @@ export const buttons = [
     firstValue: "ц",
     secondValue: "w",
     firstShift: "Ц",
-    secondShift: "W"
+    secondShift: "W",
+    keyCode: "KeyW"
   },
   {
     size: "xs",
@@ -139,7 +154,8 @@ export const buttons = [
     firstValue: "у",
     secondValue: "e",
     firstShift: "У",
-    secondShift: "E"
+    secondShift: "E",
+    keyCode: "KeyE"
   },
   {
     size: "xs",
@@ -147,7 +163,8 @@ export const buttons = [
     firstValue: "к",
     secondValue: "r",
     firstShift: "К",
-    secondShift: "R"
+    secondShift: "R",
+    keyCode: "KeyR"
   },
   {
     size: "xs",
@@ -155,7 +172,8 @@ export const buttons = [
     firstValue: "е",
     secondValue: "t",
     firstShift: "Е",
-    secondShift: "T"
+    secondShift: "T",
+    keyCode: "KeyT"
   },
   {
     size: "xs",
@@ -163,7 +181,8 @@ export const buttons = [
     firstValue: "н",
     secondValue: "y",
     firstShift: "Н",
-    secondShift: "Y"
+    secondShift: "Y",
+    keyCode: "KeyY"
   },
   {
     size: "xs",
@@ -171,7 +190,8 @@ export const buttons = [
     firstValue: "г",
     secondValue: "u",
     firstShift: "Г",
-    secondShift: "U"
+    secondShift: "U",
+    keyCode: "KeyU"
   },
   {
     size: "xs",
@@ -179,7 +199,8 @@ export const buttons = [
     firstValue: "ш",
     secondValue: "i",
     firstShift: "Ш",
-    secondShift: "I"
+    secondShift: "I",
+    keyCode: "KeyI"
   },
   {
     size: "xs",
@@ -187,7 +208,8 @@ export const buttons = [
     firstValue: "щ",
     secondValue: "o",
     firstShift: "Щ",
-    secondShift: "O"
+    secondShift: "O",
+    keyCode: "KeyO"
   },
   {
     size: "xs",
@@ -195,7 +217,8 @@ export const buttons = [
     firstValue: "з",
     secondValue: "p",
     firstShift: "З",
-    secondShift: "P"
+    secondShift: "P",
+    keyCode: "KeyP"
   },
   {
     size: "xs",
@@ -203,7 +226,8 @@ export const buttons = [
     firstValue: "х",
     secondValue: "[",
     firstShift: "Х",
-    secondShift: "{"
+    secondShift: "{",
+    keyCode: "BracketLeft"
   },
   {
     size: "xs",
@@ -211,7 +235,8 @@ export const buttons = [
     firstValue: "ъ",
     secondValue: "]",
     firstShift: "Ъ",
-    secondShift: "}"
+    secondShift: "}",
+    keyCode: "BracketRight"
   },
   {
     size: "xs",
@@ -219,7 +244,8 @@ export const buttons = [
     firstValue: "\\",
     secondValue: "\\",
     firstShift: "/",
-    secondShift: "|"
+    secondShift: "|",
+    keyCode: "Backslash"
   },
   {
     size: "s",
@@ -241,7 +267,8 @@ export const buttons = [
     firstValue: "ф",
     secondValue: "a",
     firstShift: "Ф",
-    secondShift: "A"
+    secondShift: "A",
+    keyCode: "KeyA"
   },
   {
     size: "xs",
@@ -249,7 +276,8 @@ export const buttons = [
     firstValue: "ы",
     secondValue: "s",
     firstShift: "Ы",
-    secondShift: "S"
+    secondShift: "S",
+    keyCode: "KeyS"
   },
   {
     size: "xs",
@@ -257,7 +285,8 @@ export const buttons = [
     firstValue: "в",
     secondValue: "d",
     firstShift: "В",
-    secondShift: "D"
+    secondShift: "D",
+    keyCode: "KeyD"
   },
   {
     size: "xs",
@@ -265,7 +294,8 @@ export const buttons = [
     firstValue: "а",
     secondValue: "f",
     firstShift: "А",
-    secondShift: "F"
+    secondShift: "F",
+    keyCode: "KeyF"
   },
   {
     size: "xs",
@@ -273,7 +303,8 @@ export const buttons = [
     firstValue: "п",
     secondValue: "g",
     firstShift: "П",
-    secondShift: "G"
+    secondShift: "G",
+    keyCode: "KeyG"
   },
   {
     size: "xs",
@@ -281,7 +312,8 @@ export const buttons = [
     firstValue: "р",
     secondValue: "h",
     firstShift: "Р",
-    secondShift: "H"
+    secondShift: "H",
+    keyCode: "KeyH"
   },
   {
     size: "xs",
@@ -289,7 +321,8 @@ export const buttons = [
     firstValue: "о",
     secondValue: "j",
     firstShift: "О",
-    secondShift: "J"
+    secondShift: "J",
+    keyCode: "KeyJ"
   },
   {
     size: "xs",
@@ -297,7 +330,8 @@ export const buttons = [
     firstValue: "л",
     secondValue: "k",
     firstShift: "Л",
-    secondShift: "K"
+    secondShift: "K",
+    keyCode: "KeyK"
   },
   {
     size: "xs",
@@ -305,7 +339,8 @@ export const buttons = [
     firstValue: "д",
     secondValue: "l",
     firstShift: "Д",
-    secondShift: "L"
+    secondShift: "L",
+    keyCode: "KeyL"
   },
   {
     size: "xs",
@@ -313,7 +348,8 @@ export const buttons = [
     firstValue: "ж",
     secondValue: ";",
     firstShift: "Ж",
-    secondShift: ":"
+    secondShift: ":",
+    keyCode: "Semicolon"
   },
   {
     size: "xs",
@@ -321,7 +357,8 @@ export const buttons = [
     firstValue: "э",
     secondValue: "'",
     firstShift: "",
-    secondShift: '"'
+    secondShift: '"',
+    keyCode: "Quote"
   },
   {
     size: "m",
@@ -343,7 +380,8 @@ export const buttons = [
     firstValue: "я",
     secondValue: "z",
     firstShift: "Я",
-    secondShift: "Z"
+    secondShift: "Z",
+    keyCode: "KeyZ"
   },
   {
     size: "xs",
@@ -351,7 +389,8 @@ export const buttons = [
     firstValue: "ч",
     secondValue: "x",
     firstShift: "Ч",
-    secondShift: "X"
+    secondShift: "X",
+    keyCode: "KeyX"
   },
   {
     size: "xs",
@@ -359,7 +398,8 @@ export const buttons = [
     firstValue: "с",
     secondValue: "c",
     firstShift: "С",
-    secondShift: "C"
+    secondShift: "C",
+    keyCode: "KeyC"
   },
   {
     size: "xs",
@@ -367,7 +407,8 @@ export const buttons = [
     firstValue: "м",
     secondValue: "v",
     firstShift: "М",
-    secondShift: "V"
+    secondShift: "V",
+    keyCode: "KeyV"
   },
   {
     size: "xs",
@@ -375,7 +416,8 @@ export const buttons = [
     firstValue: "и",
     secondValue: "b",
     firstShift: "И",
-    secondShift: "B"
+    secondShift: "B",
+    keyCode: "KeyB"
   },
   {
     size: "xs",
@@ -383,7 +425,8 @@ export const buttons = [
     firstValue: "т",
     secondValue: "n",
     firstShift: "Т",
-    secondShift: "N"
+    secondShift: "N",
+    keyCode: "KeyN"
   },
   {
     size: "xs",
@@ -391,7 +434,8 @@ export const buttons = [
     firstValue: "ь",
     secondValue: "m",
     firstShift: "Ь",
-    secondShift: "M"
+    secondShift: "M",
+    keyCode: "KeyM"
   },
   {
     size: "xs",
@@ -399,7 +443,8 @@ export const buttons = [
     firstValue: "б",
     secondValue: ",",
     firstShift: "Б",
-    secondShift: "<"
+    secondShift: "<",
+    keyCode: "Comma"
   },
   {
     size: "xs",
@@ -407,7 +452,8 @@ export const buttons = [
     firstValue: "ю",
     secondValue: ".",
     firstShift: "Ю",
-    secondShift: ">"
+    secondShift: ">",
+    keyCode: "Period"
   },
   {
     size: "xs",
@@ -415,7 +461,8 @@ export const buttons = [
     firstValue: ".",
     secondValue: "/",
     firstShift: ",",
-    secondShift: "?"
+    secondShift: "?",
+    keyCode: "Slash"
   },
   {
     size: "xs",

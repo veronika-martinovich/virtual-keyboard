@@ -8,12 +8,13 @@ body {
 .screen {
   width: 99%;
   height: 200px;
-  border: 1px solid #494747;
+  border: 1px solid #747070;
   border-radius: 4px;
   margin: 30px 0px;
   padding: 10px;
   font-family: inherit;
-  font-size: inherit; }
+  font-size: inherit;
+  color: #747070; }
 
 .keyboard {
   display: flex;
@@ -45,7 +46,7 @@ body {
   box-shadow: 3px 3px 5px #a19d9dd2;
   cursor: pointer; }
   .button_size_xs:hover {
-    background-color: #4e3a50; }
+    background-color: #7c677c; }
 
 .button_size_s {
   height: 50px;
@@ -59,7 +60,7 @@ body {
   box-shadow: 3px 3px 5px #a19d9dd2;
   cursor: pointer; }
   .button_size_s:hover {
-    background-color: #4e3a50; }
+    background-color: #7c677c; }
 
 .button_size_m {
   height: 50px;
@@ -73,7 +74,7 @@ body {
   box-shadow: 3px 3px 5px #a19d9dd2;
   cursor: pointer; }
   .button_size_m:hover {
-    background-color: #4e3a50; }
+    background-color: #7c677c; }
 
 .button_size_l {
   height: 50px;
@@ -87,7 +88,7 @@ body {
   box-shadow: 3px 3px 5px #a19d9dd2;
   cursor: pointer; }
   .button_size_l:hover {
-    background-color: #4e3a50; }
+    background-color: #7c677c; }
 
 .button_size_xl {
   height: 50px;
@@ -101,14 +102,10 @@ body {
   box-shadow: 3px 3px 5px #a19d9dd2;
   cursor: pointer; }
   .button_size_xl:hover {
-    background-color: #4e3a50; }
+    background-color: #7c677c; }
 
 .button_active {
-  animation: 0.5s linear press-button; }
-
-@keyframes press-button {
-  0% {
-    transform: scale(0.8); }
-  100% {
-    transform: scale(1); } }
+  background-color: #7c677c;
+  border-radius: 10px;
+  box-shadow: 3px 3px 7px #6b6868d2; }
 
