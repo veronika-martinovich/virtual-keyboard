@@ -1,6 +1,6 @@
 export class Button {
 
-  constructor(size, type, firstValue, secondValue, firstShift, secondShift, keyCode) {
+  constructor(size, type, firstValue, secondValue, firstShift, secondShift, keyCode, activeValue) {
     this.size = size;
     this.type = type;
     this.firstValue = firstValue;
@@ -8,6 +8,7 @@ export class Button {
     this.firstShift = firstShift;
     this.secondShift = secondShift;
     this.keyCode = keyCode;
+    this.activeValue = activeValue;
   }
 
   generateButton() {
@@ -15,10 +16,9 @@ export class Button {
     button.classList.add('button');
     button.classList.add(`button_size_${this.size}`);
     button.classList.add(`button_type_${this.type}`);
-    if (this.type === 'system') button.classList.add(`${this.keyCode}`);
+    button.classList.add(`${this.keyCode}`);
     button.setAttribute('data-type', this.type);
-    button.innerHTML = this.firstValue;
+    button.innerHTML = this[this.activeValue];
     return button;
   }
-
 }

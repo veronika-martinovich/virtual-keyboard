@@ -1,6 +1,13 @@
 import { buttons } from "./data";
 import { Button } from "./Button";
 
+const keyboardHeading = document.createElement("h1");
+keyboardHeading.textContent = 'Virtual keyboard for Windows OS';
+
+const keyboardDescription = document.createElement("p");
+keyboardDescription.classList.add("keyboard_description");
+keyboardDescription.textContent = 'To change language press ShiftLeft + AltLeft';
+
 const keyboardContainer = document.createElement("div");
 keyboardContainer.classList.add("keyboard_container");
 
@@ -9,12 +16,13 @@ screen.classList.add("screen");
 
 const keyboard = document.createElement("div");
 keyboard.classList.add("keyboard");
-keyboardContainer.append(screen, keyboard);
+keyboardContainer.append(keyboardHeading, keyboardDescription, screen, keyboard);
 document.body.append(keyboardContainer);
 
 let isCapsLockOn = false;
-let activeValue = "firstValue";
-let nextValue = "secondValue";
+let activeValue = sessionStorage.getItem('activeValue') || "firstValue";
+let nextValue = sessionStorage.getItem('nextValue') || "secondValue";
+console.log(sessionStorage.activeValue, sessionStorage.nextValue)
 let keysPressed = {};
 let keyboardButtonsPressed = {};
 let domButtonsPressed = {};
@@ -29,7 +37,8 @@ function createButtons() {
       item.secondValue,
       item.firstShift,
       item.secondShift,
-      item.keyCode
+      item.keyCode,
+      activeValue
     );
     keyboard.append(keyboardButton.generateButton());
     keyboardButtons.push(keyboardButton);
@@ -76,7 +85,9 @@ function handleKeydown(event) {
       domButton.innerHTML = keyboardButton[nextValue];
     });
     activeValue = nextValue;
+    sessionStorage.setItem('activeValue', `${activeValue}`);
     nextValue = activeValue === "firstValue" ? "secondValue" : "firstValue";
+    sessionStorage.setItem('nextValue', `${nextValue}`);
   }
 
   if (
@@ -129,6 +140,7 @@ function handleKeydown(event) {
 
 function handleKeyup(event) {
   domButtonsPressed[event.code].classList.remove('button_active');
+  console.log(domButtonsPressed[event.code]);
   delete keysPressed[event.code];
   delete keyboardButtonsPressed[event.code];
   delete domButtonsPressed[event.code];

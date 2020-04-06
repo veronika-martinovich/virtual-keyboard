@@ -8,14 +8,19 @@ body {
 .keyboard_container {
   margin: 0 auto;
   width: 920px;
+  text-align: center;
+}
+
+.keyboard_description {
+  color: #b1afafd2;
 }
 
 .screen {
   width: 99%;
-  height: 200px;
+  height: 200px; 
   border: 1px solid $color-input-button;
   border-radius: 4px;
-  margin: 30px 0px;
+  margin: 20px 0px;
   padding: 10px;
   font-family: inherit;
   font-size: inherit;
@@ -49,6 +54,7 @@ body {
 
   &:hover {
     background-color: #7c677c;
+    box-shadow: 3px 3px 7px #6b6868d2;
   }
 }
 
