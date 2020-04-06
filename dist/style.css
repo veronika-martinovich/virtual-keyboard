@@ -6,12 +6,14 @@ body {
   width: 920px; }
 
 .screen {
-  width: 100%;
+  width: 99%;
   height: 200px;
-  border: 1px solid #9c6d07;
+  border: 1px solid #494747;
   border-radius: 4px;
   margin: 30px 0px;
-  background-color: #feffbc96; }
+  padding: 10px;
+  font-family: inherit;
+  font-size: inherit; }
 
 .keyboard {
   display: flex;
@@ -100,4 +102,13 @@ body {
   cursor: pointer; }
   .button_size_xl:hover {
     background-color: #4e3a50; }
+
+.button_active {
+  animation: 0.5s linear press-button; }
+
+@keyframes press-button {
+  0% {
+    transform: scale(0.8); }
+  100% {
+    transform: scale(1); } }
 

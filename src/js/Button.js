@@ -21,9 +21,4 @@ export class Button {
     return button;
   }
 
-  changeValue() {
-    const newValue = this.innerHTML === this.firstValue ? this.secondValue : this.firstValue;
-    button.innerHTML = newValue;
-  }
-
 }

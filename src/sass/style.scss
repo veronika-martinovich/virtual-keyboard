@@ -11,12 +11,14 @@ body {
 }
 
 .screen {
-  width: 100%;
+  width: 99%;
   height: 200px;
-  border: 1px solid #9c6d07;
+  border: 1px solid $color-system-button;
   border-radius: 4px;
   margin: 30px 0px;
-  background-color: #feffbc96;
+  padding: 10px;
+  font-family: inherit;
+  font-size: inherit;
 }
 
 .keyboard {
@@ -77,5 +79,17 @@ body {
   @include button(420px)
 }
 
+.button_active {
+  animation: 0.5s linear press-button;
+}
 
+@keyframes press-button {
+  0% {
+    transform: scale(0.8);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
 
