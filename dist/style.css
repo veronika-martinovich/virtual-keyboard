@@ -35,7 +35,8 @@ body {
 .button_type_input {
   background-color: #747070; }
 
-.button_type_system {
+.button_type_system,
+.button_type_input-system {
   background-color: #494747; }
 
 .button_size_xs {

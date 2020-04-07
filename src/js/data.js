@@ -224,18 +224,18 @@ export const buttons = [
     size: "xs",
     type: "input",
     firstValue: "х",
-    secondValue: "[",
+    secondValue: "\[",
     firstShift: "Х",
-    secondShift: "{",
+    secondShift: "\{",
     keyCode: "BracketLeft"
   },
   {
     size: "xs",
     type: "input",
     firstValue: "ъ",
-    secondValue: "]",
+    secondValue: "\]",
     firstShift: "Ъ",
-    secondShift: "}",
+    secondShift: "\}",
     keyCode: "BracketRight"
   },
   {
@@ -466,9 +466,9 @@ export const buttons = [
   },
   {
     size: "xs",
-    type: "system",
-    firstValue: "&#9650",
-    secondValue: "&#9650",
+    type: "input-system",
+    firstValue: "▲",
+    secondValue: "▲",
     keyCode: "ArrowUp"
   },
   {
@@ -515,23 +515,23 @@ export const buttons = [
   },
   {
     size: "xs",
-    type: "system",
-    firstValue: "&#9668",
-    secondValue: "&#9668",
+    type: "input-system",
+    firstValue: "◄",
+    secondValue: "◄",
     keyCode: "ArrowLeft"
   },
   {
     size: "xs",
-    type: "system",
-    firstValue: "&#9660",
-    secondValue: "&#9660",
+    type: "input-system",
+    firstValue: "▼",
+    secondValue: "▼",
     keyCode: "ArrowDown"
   },
   {
     size: "xs",
-    type: "system",
-    firstValue: "&#9658",
-    secondValue: "&#9658",
+    type: "input-system",
+    firstValue: "►",
+    secondValue: "►",
     keyCode: "ArrowRight"
   },
   {

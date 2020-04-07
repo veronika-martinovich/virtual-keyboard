@@ -2,11 +2,12 @@ import { buttons } from "./data";
 import { Button } from "./Button";
 
 const keyboardHeading = document.createElement("h1");
-keyboardHeading.textContent = 'Virtual keyboard for Windows OS';
+keyboardHeading.textContent = "Virtual keyboard for Windows OS";
 
 const keyboardDescription = document.createElement("p");
 keyboardDescription.classList.add("keyboard_description");
-keyboardDescription.textContent = 'To change language press ShiftLeft + AltLeft';
+keyboardDescription.textContent =
+  "To change language press ShiftLeft + AltLeft";
 
 const keyboardContainer = document.createElement("div");
 keyboardContainer.classList.add("keyboard_container");
@@ -16,13 +17,17 @@ screen.classList.add("screen");
 
 const keyboard = document.createElement("div");
 keyboard.classList.add("keyboard");
-keyboardContainer.append(keyboardHeading, keyboardDescription, screen, keyboard);
+keyboardContainer.append(
+  keyboardHeading,
+  keyboardDescription,
+  screen,
+  keyboard
+);
 document.body.append(keyboardContainer);
 
 let isCapsLockOn = false;
-let activeValue = sessionStorage.getItem('activeValue') || "firstValue";
-let nextValue = sessionStorage.getItem('nextValue') || "secondValue";
-console.log(sessionStorage.activeValue, sessionStorage.nextValue)
+let activeValue = sessionStorage.getItem("activeValue") || "firstValue";
+let nextValue = sessionStorage.getItem("nextValue") || "secondValue";
 let keysPressed = {};
 let keyboardButtonsPressed = {};
 let domButtonsPressed = {};
@@ -46,12 +51,6 @@ function createButtons() {
 }
 createButtons();
 
-let inputButtons = document.querySelectorAll(".button_type_input");
-let inputDOMButtons = [];
-for (let i = 0; i < inputButtons.length; i++) {
-  inputDOMButtons.push(inputButtons[i]);
-}
-
 let allButtons = document.querySelectorAll(".button");
 let allDOMButtons = [];
 for (let i = 0; i < allButtons.length; i++) {
@@ -61,8 +60,8 @@ for (let i = 0; i < allButtons.length; i++) {
 document.addEventListener("keydown", handleKeydown);
 document.addEventListener("keyup", handleKeyup);
 keyboard.addEventListener("click", handleClick);
-keyboard.addEventListener('mousedown', animateClick);
-keyboard.addEventListener('mouseup', unanimateClick);
+keyboard.addEventListener("mousedown", addClickAnimation);
+keyboard.addEventListener("mouseup", removeClickAnimation);
 
 function handleKeydown(event) {
   keysPressed[event.code] = event.code;
@@ -70,24 +69,21 @@ function handleKeydown(event) {
     return boardButton.keyCode == keysPressed[event.code];
   });
   domButtonsPressed[event.code] = allDOMButtons.find(domButton => {
-    return (
-      domButton.innerHTML == keyboardButtonsPressed[event.code].firstValue ||
-      domButton.innerHTML == keyboardButtonsPressed[event.code].secondValue
-    );
+    return domButton.classList.contains(event.code);
   });
-  domButtonsPressed[event.code].classList.add('button_active');
-  
+  domButtonsPressed[event.code].classList.add("button_active");
+
   if (keysPressed["ShiftLeft"] && keysPressed["AltLeft"]) {
-    inputDOMButtons.forEach(domButton => {
+    allDOMButtons.forEach(domButton => {
       let keyboardButton = keyboardButtons.find(boardButton => {
         return boardButton[activeValue] == domButton.innerHTML;
       });
       domButton.innerHTML = keyboardButton[nextValue];
     });
     activeValue = nextValue;
-    sessionStorage.setItem('activeValue', `${activeValue}`);
+    sessionStorage.setItem("activeValue", `${activeValue}`);
     nextValue = activeValue === "firstValue" ? "secondValue" : "firstValue";
-    sessionStorage.setItem('nextValue', `${nextValue}`);
+    sessionStorage.setItem("nextValue", `${nextValue}`);
   }
 
   if (
@@ -102,29 +98,40 @@ function handleKeydown(event) {
     !keysPressed["ControlRight"] &&
     !keysPressed["MetaLeft"] &&
     !keysPressed["AltLeft"] &&
-    !keysPressed["AltRight"] &&
-    !keysPressed["ArrowUp"] &&
-    !keysPressed["ArrowDown"] &&
-    !keysPressed["ArrowLeft"] &&
-    !keysPressed["ArrowRight"]
+    !keysPressed["AltRight"]
   ) {
     if (!isCapsLockOn) {
-      screen.textContent += domButtonsPressed[event.code].innerHTML
-    } 
+      screen.textContent += domButtonsPressed[event.code].innerHTML;
+    }
     if (isCapsLockOn) {
-      screen.textContent += domButtonsPressed[event.code].innerHTML.toUpperCase();
-    }}
+      screen.textContent += domButtonsPressed[
+        event.code
+      ].innerHTML.toUpperCase();
+    }
+  }
 
   if (keysPressed["Backspace"]) {
-    screen.textContent = screen.textContent.slice(0, -1);
+    if (screen.selectionStart === 0) {
+      screen.setSelectionRange(screen.value.length, screen.value.length)
+    }
+    let pos = screen.selectionStart - 1;
+    screen.textContent =
+      screen.textContent.slice(0, screen.selectionStart - 1) +
+      screen.textContent.slice(screen.selectionStart);
+      screen.setSelectionRange(pos, pos)
   }
 
   if (keysPressed["Delete"]) {
+    if (screen.selectionStart === 0) {
+      screen.setSelectionRange(screen.value.length, screen.value.length)
+    }
+    let pos = screen.selectionStart;
     screen.textContent =
-    screen.textContent.slice(0, screen.selectionEnd) +
-    screen.textContent.slice(screen.selectionEnd + 1);
+      screen.textContent.slice(0, screen.selectionStart) +
+      screen.textContent.slice(screen.selectionStart + 1);
+      screen.setSelectionRange(pos, pos)
   }
- 
+
   if (keysPressed["Tab"]) {
     screen.textContent += "    ";
   }
@@ -139,30 +146,49 @@ function handleKeydown(event) {
 }
 
 function handleKeyup(event) {
-  domButtonsPressed[event.code].classList.remove('button_active');
-  console.log(domButtonsPressed[event.code]);
+  domButtonsPressed[event.code].classList.remove("button_active");
   delete keysPressed[event.code];
   delete keyboardButtonsPressed[event.code];
   delete domButtonsPressed[event.code];
 }
 
 function handleClick(event) {
-  if (event.target.dataset.type === "input" && !isCapsLockOn) {
+  if (
+    (event.target.dataset.type === "input" ||
+      event.target.dataset.type === "input-system") &&
+    !isCapsLockOn
+  ) {
     screen.textContent += event.target.textContent.toLowerCase();
   }
 
-  if (event.target.dataset.type === "input" && isCapsLockOn) {
+  if (
+    (event.target.dataset.type === "input" ||
+      event.target.dataset.type === "input-system") &&
+    isCapsLockOn
+  ) {
     screen.textContent += event.target.textContent.toUpperCase();
   }
 
   if (event.target.textContent === "Backspace") {
-    screen.textContent = screen.textContent.slice(0, -1);
+    if (screen.selectionStart === 0) {
+      screen.setSelectionRange(screen.value.length, screen.value.length)
+    }
+    let pos = screen.selectionStart - 1;
+    screen.textContent =
+      screen.textContent.slice(0, screen.selectionStart - 1) +
+      screen.textContent.slice(screen.selectionStart);
+      screen.setSelectionRange(pos, pos)
   }
 
   if (event.target.textContent === "Del") {
+    if (screen.selectionStart === 0) {
+      screen.setSelectionRange(screen.value.length, screen.value.length)
+    }
+    let pos = screen.selectionStart;
     screen.textContent =
-      screen.textContent.slice(0, screen.selectionEnd) +
-      screen.textContent.slice(screen.selectionEnd + 1);
+      screen.textContent.slice(0, screen.selectionStart) +
+      screen.textContent.slice(screen.selectionStart + 1);
+      screen.setSelectionRange(pos, pos)
   }
 
   if (event.target.textContent === "Tab") {
@@ -178,14 +204,14 @@ function handleClick(event) {
   }
 }
 
-function animateClick() {
-  if (event.target.classList.contains('button')) {
-    event.target.classList.add('button_active');
+function addClickAnimation() {
+  if (event.target.classList.contains("button")) {
+    event.target.classList.add("button_active");
   }
 }
 
-function unanimateClick() {
-  if (event.target.classList.contains('button')) {
-    event.target.classList.remove('button_active');
+function removeClickAnimation() {
+  if (event.target.classList.contains("button")) {
+    event.target.classList.remove("button_active");
   }
 }

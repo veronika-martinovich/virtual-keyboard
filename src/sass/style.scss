@@ -62,7 +62,8 @@ body {
   background-color: $color-input-button;
 }
 
-.button_type_system {
+.button_type_system,
+.button_type_input-system {
   background-color: $color-system-button;
 }
 
