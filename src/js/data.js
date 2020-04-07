@@ -23,7 +23,7 @@ export const buttons = [
     firstValue: "2",
     secondValue: "2",
     firstShift: '"',
-    secondShift: '"',
+    secondShift: '@',
     keyCode: "Digit2"
   },
   {
@@ -68,7 +68,7 @@ export const buttons = [
     firstValue: "7",
     secondValue: "7",
     firstShift: "?",
-    secondShift: "&",
+    secondShift: "&amp;",
     keyCode: "Digit7"
   },
   {
@@ -121,6 +121,8 @@ export const buttons = [
     type: "system",
     firstValue: "Backspace",
     secondValue: "Backspace",
+    firstShift: "Backspace",
+    secondShift: "Backspace",
     keyCode: "Backspace"
   },
   {
@@ -128,6 +130,8 @@ export const buttons = [
     type: "system",
     firstValue: "Tab",
     secondValue: "Tab",
+    firstShift: "Tab",
+    secondShift: "Tab",
     keyCode: "Tab"
   },
   {
@@ -252,6 +256,8 @@ export const buttons = [
     type: "system",
     firstValue: "Del",
     secondValue: "Del",
+    firstShift: "Del",
+    secondShift: "Del",
     keyCode: "Delete"
   },
   {
@@ -259,6 +265,8 @@ export const buttons = [
     type: "system",
     firstValue: "CapsLock",
     secondValue: "CapsLock",
+    firstShift: "CapsLock",
+    secondShift: "CapsLock",
     keyCode: "CapsLock"
   },
   {
@@ -356,7 +364,7 @@ export const buttons = [
     type: "input",
     firstValue: "э",
     secondValue: "'",
-    firstShift: "",
+    firstShift: "Э",
     secondShift: '"',
     keyCode: "Quote"
   },
@@ -365,6 +373,8 @@ export const buttons = [
     type: "system",
     firstValue: "Enter",
     secondValue: "Enter",
+    firstShift: "Enter",
+    secondShift: "Enter",
     keyCode: "Enter"
   },
   {
@@ -372,6 +382,8 @@ export const buttons = [
     type: "system",
     firstValue: "Shift",
     secondValue: "Shift",
+    firstShift: "Shift",
+    secondShift: "Shift",
     keyCode: "ShiftLeft"
   },
   {
@@ -443,7 +455,7 @@ export const buttons = [
     firstValue: "б",
     secondValue: ",",
     firstShift: "Б",
-    secondShift: "<",
+    secondShift: "&lt;",
     keyCode: "Comma"
   },
   {
@@ -452,7 +464,7 @@ export const buttons = [
     firstValue: "ю",
     secondValue: ".",
     firstShift: "Ю",
-    secondShift: ">",
+    secondShift: "&gt;",
     keyCode: "Period"
   },
   {
@@ -469,6 +481,8 @@ export const buttons = [
     type: "input-system",
     firstValue: "▲",
     secondValue: "▲",
+    firstShift: "▲",
+    secondShift: "▲",
     keyCode: "ArrowUp"
   },
   {
@@ -476,6 +490,8 @@ export const buttons = [
     type: "system",
     firstValue: "Shift",
     secondValue: "Shift",
+    firstShift: "Shift",
+    secondShift: "Shift",
     keyCode: "ShiftRight"
   },
   {
@@ -483,6 +499,8 @@ export const buttons = [
     type: "system",
     firstValue: "Ctrl",
     secondValue: "Ctrl",
+    firstShift: "Ctrl",
+    secondShift: "Ctrl",
     keyCode: "ControlLeft"
   },
   {
@@ -490,6 +508,8 @@ export const buttons = [
     type: "system",
     firstValue: "Win",
     secondValue: "Win",
+    firstShift: "Win",
+    secondShift: "Win",
     keyCode: "MetaLeft"
   },
   {
@@ -497,6 +517,8 @@ export const buttons = [
     type: "system",
     firstValue: "Alt",
     secondValue: "Alt",
+    firstShift: "Alt",
+    secondShift: "Alt",
     keyCode: "AltLeft"
   },
   {
@@ -504,6 +526,8 @@ export const buttons = [
     type: "input",
     firstValue: " ",
     secondValue: " ",
+    firstShift: " ",
+    secondShift: " ",
     keyCode: "Space"
   },
   {
@@ -511,6 +535,8 @@ export const buttons = [
     type: "system",
     firstValue: "Alt",
     secondValue: "Alt",
+    firstShift: "Alt",
+    secondShift: "Alt",
     keyCode: "AltRight"
   },
   {
@@ -518,6 +544,8 @@ export const buttons = [
     type: "input-system",
     firstValue: "◄",
     secondValue: "◄",
+    firstShift: "◄",
+    secondShift: "◄",
     keyCode: "ArrowLeft"
   },
   {
@@ -525,6 +553,8 @@ export const buttons = [
     type: "input-system",
     firstValue: "▼",
     secondValue: "▼",
+    firstShift: "▼",
+    secondShift: "▼",
     keyCode: "ArrowDown"
   },
   {
@@ -532,6 +562,8 @@ export const buttons = [
     type: "input-system",
     firstValue: "►",
     secondValue: "►",
+    firstShift: "►",
+    secondShift: "►",
     keyCode: "ArrowRight"
   },
   {
@@ -539,6 +571,8 @@ export const buttons = [
     type: "system",
     firstValue: "Ctrl",
     secondValue: "Ctrl",
+    firstShift: "Ctrl",
+    secondShift: "Ctrl",
     keyCode: "ControlRight"
   }
 ];
