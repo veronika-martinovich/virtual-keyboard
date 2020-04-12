@@ -62,7 +62,8 @@ body {
   background-color: $color-input-button;
 }
 
-.button_type_system {
+.button_type_system,
+.button_type_input-system {
   background-color: $color-system-button;
 }
 
@@ -87,6 +88,12 @@ body {
 }
 
 .button_active {
+  background-color: #7c677c;
+  border-radius: 10px;
+  box-shadow: 3px 3px 7px #6b6868d2;
+}
+
+.button_active_caps {
   background-color: #7c677c;
   border-radius: 10px;
   box-shadow: 3px 3px 7px #6b6868d2;
